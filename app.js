@@ -126,3 +126,7 @@ terminar.addEventListener("click", () => {
 
 // Al abrir, muestra el día siguiente al último terminado.
 mostrarDia((leerUltimo() + 1) % RUTINA.length);
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+}
